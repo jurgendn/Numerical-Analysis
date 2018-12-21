@@ -29,7 +29,21 @@
 	* y = f
 ##### Tiếp tục vòng lặp. Giá trị của y(x) lúc này lại được thay lại vào trong:
 	* f = s.integrate("f(x, y)", (x, x0, x))
-	* y = f
-##### Sau mỗi một lần lặp, giá trị của y(x) trả về càng ngày càng gần với ngiệm đúng của phương trình. Cần lưu ý rằng nghiệm này chỉ đúng trên một miền nhất định, mà cụ thể hơn là miền thỏa mãn điều kiện hàm f(x, y) là hàm lipschitz theo y trên đó. 
+		* y = f
+##### Sau mỗi một lần lặp, giá trị của $$y(x)$$ trả về càng ngày càng gần với ngiệm đúng của phương trình. Cần lưu ý rằng nghiệm này chỉ đúng trên một miền nhất định, mà cụ thể hơn là miền thỏa mãn điều kiện hàm f(x, y) là hàm lipschitz theo y trên đó. 
 ##### Cuối cùng, ta in ra kết quả 
 	* print(y)
+##### Lấy ví dụ là một phương trình trong giáo trình:
+	* y' = x**2 + y**2
+	* y(0) = 0
+##### Tức là, input của chương trình sẽ là:
+	* f(x, y) = x**2 + y**2
+	* y = 0
+	* x0 = 0
+##### Mạnh dạn đề xuất 3 lần lặp, theo đó, chương trình sẽ được config lại thành:
+	* y = 0
+	* for i in range(k):
+		* f = s.integrate(x**2 + y**2, (x, 0, x))
+		* y = f
+##### Cuối cùng, với input như trên, output sẽ là:
+	* y(x) 
