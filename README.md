@@ -13,7 +13,7 @@
 ##### Dòng này dùng để import các biến x, y là các biến symbolic
 ##### Chúng ta cũng cần lựa chọn số lần lặp thích hợp cho phương pháp, do đó ta có 
 	> k = int(input("Nhập số lần lặp: "))
-###### Nghĩa là chương trình sẽ được lặp k lần, nghiệm theo thứ tự tìm được là y[0], y[1], y[2],..., y[k-1]. Lúc này quá trình lặp sẽ dừng, nghiệm của phương trình vi phân sẽ là y[k-1]
+##### Nghĩa là chương trình sẽ được lặp k lần, nghiệm theo thứ tự tìm được là y[0], y[1], y[2],..., y[k-1]. Lúc này quá trình lặp sẽ dừng, nghiệm của phương trình vi phân sẽ là y[k-1]
 ##### Mọi phương trình vi phân đều cần có một giá trị y(x0). Ta sẽ khai báo y0 tại đây
 	* Khai báo y0:
 	> y = y0
