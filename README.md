@@ -27,10 +27,10 @@
 	> f = s.integrate("f(x, y)", (x, x0, x))
 ##### Sau bước này, giá trị trả về cho f là một biểu thức (đa thức) của x. Thực ra, đây chính là giá trị của y. Như vậy, ta sẽ cần một bước gán nhỏ:
 	> y = f
-##### Tiếp tục vòng lặp. Giá trị của y(x) lúc này lại được thay lại vào trong:
+##### Tiếp tục vòng lặp. Giá trị của $y(x)$ lúc này lại được thay lại vào trong:
 	> f = s.integrate("f(x, y)", (x, x0, x))
 		> y = f
-##### Sau mỗi một lần lặp, giá trị của y(x) trả về càng ngày càng gần với ngiệm đúng của phương trình. Cần lưu ý rằng nghiệm này chỉ đúng trên một miền nhất định, mà cụ thể hơn là miền thỏa mãn điều kiện hàm f(x, y) là hàm lipschitz theo y trên đó. 
+##### Sau mỗi một lần lặp, giá trị của $y(x)$ trả về càng ngày càng gần với ngiệm đúng của phương trình. Cần lưu ý rằng nghiệm này chỉ đúng trên một miền nhất định, mà cụ thể hơn là miền thỏa mãn điều kiện hàm f(x, y) là hàm lipschitz theo y trên đó. 
 ##### Cuối cùng, ta in ra kết quả 
 	> print(y)
 ##### Lấy ví dụ là một phương trình trong giáo trình:
