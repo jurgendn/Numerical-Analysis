@@ -25,7 +25,7 @@
 	> for i in range(k):
 ##### Lặp k lần, dễ vlol. Dòng tiếp theo:
 	> f = s.integrate("f(x, y)", (x, x0, x))
-##### Sau bước này, giá trị trả về cho f là một biểu thức (đa thức) của x. Thực ra, đây chính là giá trị của y. Như vậy, ta sẽ cần một bước gán nhỏ:
+##### Sau bước này, giá trị trả về cho f là một hàm số của x. Thực ra, đây chính là giá trị của y. Như vậy, ta sẽ cần một bước gán nhỏ:
 	> y = f
 ##### Tiếp tục vòng lặp. Giá trị của y(x) lúc này lại được thay lại vào trong:
 	> f = s.integrate("f(x, y)", (x, x0, x))
