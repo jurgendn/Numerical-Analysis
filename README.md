@@ -9,7 +9,7 @@
 	* pip install sympy --user
 #### Cấu trúc chương trình
 ##### Chương trình sử dụng biến symbolic. Do đó, kết quả trả về là dạng symbolic, tức là một biểu thức chứa biến. Đầu tiên:
-	* from sympy.abc imprort x, y
+	> from sympy.abc imprort x, y
 ##### Dòng này dùng để import các biến x, y là các biến symbolic
 ##### Chúng ta cũng cần lựa chọn số lần lặp thích hợp cho phương pháp, do đó ta có 
 	> k = int(input("Nhập số lần lặp: "))
