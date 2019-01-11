@@ -4,10 +4,10 @@
 	* Phương pháp Picard
 	* Phương pháp chuỗi lũy thừa
 ## Phương pháp Picard
-#### Import thư viện **sympy**
+#### Chú ý trước khi chạy chương trình
 	* Để có thể chạy được chương trình, cần phải import thư viện sympy
 	* pip install sympy --user
-#### Cấu trúc chương trình
+#### Hướng dẫn sử dụng chương trình
 Chương trình sử dụng biến symbolic. Do đó, kết quả trả về là dạng symbolic, tức là một biểu thức chứa biến. Đầu tiên:
 	
 	> from sympy.abc imprort x, y
@@ -40,7 +40,7 @@ TTiếp tục vòng lặp. Giá trị của y(x) lúc này lại được thay l
 
 	> f = s.integrate("f(x, y)", (x, x0, x))
 		> y = f
-SSau mỗi một lần lặp, giá trị của y(x) trả về càng ngày càng gần với ngiệm đúng của phương trình. Cần lưu ý rằng nghiệm này chỉ đúng trên một miền nhất định, mà cụ thể hơn là miền thỏa mãn điều kiện hàm f(x, y) là hàm lipschitz theo y trên đó. 
+Sau mỗi một lần lặp, giá trị của y(x) trả về càng ngày càng gần với ngiệm đúng của phương trình. Cần lưu ý rằng nghiệm này chỉ đúng trên một miền nhất định, mà cụ thể hơn là miền thỏa mãn điều kiện hàm f(x, y) là hàm lipschitz theo y trên đó. 
 
 Cuối cùng, ta in ra kết quả:
 
