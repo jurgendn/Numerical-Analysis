@@ -2,8 +2,9 @@
 Phương pháp chuỗi lũy thừa được sử dụng để giải các phương trình vi phân có dạng
 
     * y'' + p(x)y' + q(x) = f(x)
-## *Ngôn ngữ: Python 3*
-## **Phương pháp chuỗi lũy thừa**
+
+*Ngôn ngữ: Python 3*
+
 ### **Thư viện sử dụng**
 Chương trình sử dụng thư viện **Sympy** đối với tính toán các biến symbolic, đồng thời cũng tạo thuận lợi cho việc sử dụng các hàm tính toán có sẵn.
 
