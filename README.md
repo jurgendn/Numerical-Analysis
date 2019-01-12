@@ -1,6 +1,6 @@
 # Giải tích số - Phương trình vi phân
 * Ngôn ngữ: Python 3	
-* Chương trình gồm 2 phương pháp: 
+* Gồm 2 phương pháp: 
 	* Phương pháp Picard
 	* Phương pháp chuỗi lũy thừa
 	
