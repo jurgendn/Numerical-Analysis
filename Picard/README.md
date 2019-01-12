@@ -62,3 +62,5 @@ Cuối cùng, với input như trên, output sẽ là:
 Như vậy, nghiệm của phương trình đã cho giải theo phương pháp Picard là:
 
     > y(x) = x+x/3+11x/6561 
+
+* [Trang chính](https://github.com/Billrizer/Numerical-Analysis_Integrated-Equation/tree/Integral-Equation)
