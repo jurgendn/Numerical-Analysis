@@ -5,5 +5,5 @@
 	* Phương pháp chuỗi lũy thừa
 	
 # Hướng dẫn sử dụng
-## [Phương pháp Picard] (https://github.com/Billrizer/Numerical-Analysis_Integrated-Equation/tree/Integral-Equation/Picard)
-## [Phương pháp chuỗi lũy thừa] (https://github.com/Billrizer/Numerical-Analysis_Integrated-Equation/tree/Integral-Equation/Power%20Series)
+## [Phương pháp Picard](https://github.com/Billrizer/Numerical-Analysis_Integrated-Equation/tree/Integral-Equation/Picard)
+## [Phương pháp chuỗi lũy thừa](https://github.com/Billrizer/Numerical-Analysis_Integrated-Equation/tree/Integral-Equation/Power%20Series)
