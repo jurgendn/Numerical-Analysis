@@ -4,6 +4,6 @@
 	* Phương pháp Picard
 	* Phương pháp chuỗi lũy thừa
 	
-Phương pháp **Picard** được chứa trong thư mục **Picard**. Đọc README trong thư mục đó cho hướng dẫn sử dụng
-
-Đối với phương pháp chuỗi lũy thừa, vào thư mục **Power Series** để biết thêm thông tin chi tiết
+# Hướng dẫn sử dụng
+## [Phương pháp Picard] (https://github.com/Billrizer/Numerical-Analysis_Integrated-Equation/tree/Integral-Equation/Picard)
+## [Phương pháp chuỗi lũy thừa] (https://github.com/Billrizer/Numerical-Analysis_Integrated-Equation/tree/Integral-Equation/Power%20Series)
