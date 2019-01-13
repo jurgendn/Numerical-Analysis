@@ -91,4 +91,4 @@ Như vậy, tương ứng với nghiệm của bài toán là:
 
     > y(x) = x + 0.041(6)*x**4 + 0.002(7)*x**6 + 0.00027281746031746027*x**8
 
-
+* [Trang chính](https://github.com/Billrizer/Numerical-Analysis_Integrated-Equation/tree/Integral-Equation)
