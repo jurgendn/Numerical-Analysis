@@ -46,4 +46,4 @@ def power_series(p, q, f, a, b):
 
 print("Equation: y'' + ",px,"*y' + ", qx,"*y = ",fx)
 print(power_series(p, q, f, a, b))
-print("Cấp chính xác: O(x**",n+1,")")
+print("Degree of accuracy: O(x**",n+1,")")
