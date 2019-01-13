@@ -10,7 +10,8 @@ Chương trình sử dụng thư viện **Sympy** đối với tính toán các 
 
 Để import thư viện **Sympy**, ta sử dụng cú pháp sau:
 
-    > import sympy as...
+    > import sympy as sy
+    "sy ở đây chỉ là thay thế cho sympy. Thay vì viết sympy thì ta chỉ cần viết sy"
 ### **Các moudule được sử dụng**
 Chương trình sử dụng 1 file là "**Taylor_Expansion.py**" để khai triển Taylor cho các hàm p(x), q(x) và f(x) cho bởi phương trình đầu bài viết.
 
@@ -23,25 +24,25 @@ Tiếp đó, ta cần nhập vào một số thông tin cần thiết cho phươ
 
 Nhập vào bậc của đa thức khai triển Taylor cho cách hàm số:
 
-    > n = int(input("Degree: "))
+    > n = int(input("Degree of solution polynomial: "))
 Sau đó, ta lưu lại các hệ số của khai triển Taylor vào các array p, q, f đã được định nghĩa. 
 
 ### **Cách định nghĩa các hàm p, q, f:**
 
 Trong file **Power_Series.py**, ta thấy có đoạn sau:
 
-    > p = te.TaylorExpansion('p is here', n)
-    > q = te.TaylorExpansion('q is here', n)
-    > f = te.TaylorExpansion('f is here', n)
+    > px = 
+    > qx = 
+    > fx = 
 
 Giả dụ ta cần giải phương trình
 
     > y'' - x.y' + y = 1 - cos(x)
 Khi đó, p, q, f sẽ được nhập như sau:
 
-    > p = te.TaylorExpansion(-x, n)
-    > q = te.TaylorExpansion(1 + 0*x, n)
-    > f = te.TaylorExpansion(1 - sy.cos(x), n)
+    > px = -x
+    > qx = 1 + 0*x
+    > fx = 1 - sy.cos(x)
 
 ## Chạy chương trình
 B1: Nhập các dữ liệu đầu vào như các hàm p(x), q(x), f(x) như đã hướng dẫn bên trên
@@ -69,9 +70,9 @@ Lấy một bài tập có trong giáo trình:
 
 Nhập các dữ liệu đầu vào như sau:
 
-    > p = te.TaylorExpansion(-x, n)
-    > q = te.TaylorExpansion(1 + 0*x, n)
-    > f = te.TaylorExpansion(1 - sy.cos(x), n)
+    > px = -x
+    > qx = 1 + 0*x
+    > fx = 1 - sy.cos(x)
 
 Chạy chương trình với cú pháp 
 
@@ -83,15 +84,18 @@ Giả sử, nghiệm của phương trình là một đa thức bậc 8, khi đ�
     > y(0) = 0
     > y'(0) = 1
 
-Kết quả đầu ra là một list như sau:
+Kết quả đầu ra là bao gồm:
 
+    > Equation: y'' - x.y' + y = 1 - cos(x)
+        * Dòng này là viết lại phương trình
     > [0.0, 1.0, 0.0, 0.0, 0.041666666666666664, 0.0, 0.002777777777777778, 0.0, 0.00027281746031746027, 0.0]
+        * Hệ số đa thức nghiệm
+    > Degree of accuracy: O(x**9)
+        * Cấp chính xác
 
 Như vậy, tương ứng với nghiệm của bài toán là:
 
     > y(x) = x + 0.041(6)*x**4 + 0.002(7)*x**6 + 0.00027281746031746027*x**8
-Độ chính xác:
 
-    > O(x**10)
 
 * [Trang chính](https://github.com/Billrizer/Numerical-Analysis_Integrated-Equation/tree/Integral-Equation)
