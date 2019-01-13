@@ -9,17 +9,24 @@ import sympy.functions as syf
 # Import x as a symbolic variable
 x = sy.Symbol("x")
 
-# Input
-n = int(input("Nhap cap khai trien: "))
+
+#Input function
+px = -x
+qx = 1 + 0*x
+fx = 1 - sy.cos(x)
+
+
+# Input degree + value for y(0) & y'(0)
+n = int(input("Degree of solution polinomial: "))
 a = float(input("y(0): "))
 b = float(input("y'(0): "))
 
 
 
 # Define function and Taylor expansion
-p = te.taylor(-x, n)
-q = te.taylor(1 + 0*x , n)
-f = te.taylor(1-sy.cos(x), n)
+p = te.taylor(px, n)
+q = te.taylor(qx , n)
+f = te.taylor(fx, n)
 
 
 # Solve differential equation
@@ -37,4 +44,6 @@ def power_series(p, q, f, a, b):
     return C
 
 
+print("Equation: y'' + ",px,"*y' + ", qx,"*y = ",fx)
 print(power_series(p, q, f, a, b))
+print("Cấp chính xác: O(x**",n+1,")")
