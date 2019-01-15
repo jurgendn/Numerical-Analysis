@@ -35,7 +35,7 @@ B3: Nhập các dữ liệu đầu vào như bậc của đa thức nghiệm và
 Kết quả hiện ra trên màn hình terminal gồm 2 giá trị, gồm nghiệm của phương trình và số vòng lặp
 
 ### **Chạy thử ví dụ**
-Lấy một bài tập có trong giáo trình:
+Lấy một bài tập nào đó có 1 nghiệm đúng bằng 1:
 
     > f(x) = x**3 + sin(x-1) - 1 = 0
 
