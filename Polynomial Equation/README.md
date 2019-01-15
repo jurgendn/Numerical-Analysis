@@ -59,4 +59,6 @@ Output của chương trình sẽ là:
 
 Trong đó thì **0.9999995231628418** là nghiệm và chương trình cần **21** vòng lặp để hoàn thành
 
+Nhận xét rằng **0.9999995231628418** là kHá ChUẩN so với nghiệm đúng
+
 * [Trang chính](https://github.com/Billrizer/Numerical-Analysis_Integrated-Equation/tree/Integral-Equation)
