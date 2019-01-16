@@ -5,11 +5,12 @@ from sympy.abc import x, y, t
 k = int(input("Nhap so lan lap: "))
 
 # Giá trị khởi đầu của y0
-y = 0
+y0 = 1
+y = y0
 
 for i in range(k):
     # Hàm f(x, y) được nhập trực tiếp ở đây
-    f = s.integrate(x*x+y*y, (x, 2, x))
+    f = y0 + s.integrate(-y, (x, 0, x))
     y = f
 
 # In ra đáp án
