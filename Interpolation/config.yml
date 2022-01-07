@@ -1,1 +1,14 @@
-method: newton
+# Available methods:
+#  - inverse_function
+#  - iterative
+method: iterative
+
+inverse_function:
+  # Available: lagrange, newton
+  type: lagrange
+
+iterative:
+  # Available: forward, backward, centre, auto
+  type: auto
+  max_ite: 100
+  tolerance: 1e-6

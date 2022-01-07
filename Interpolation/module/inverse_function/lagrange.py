@@ -18,7 +18,7 @@ class LagrangeInterpolation:
 
         res = 0
         for idx, (obs, ref) in enumerate(zip(observations, references)):
-            _rest = observations[:idx] + observations[idx + 1:]
+            _rest = list(observations[:idx]) + list(observations[idx + 1:])
 
             __denom_coef = list(product([obs], _rest))
             __denom = list(
