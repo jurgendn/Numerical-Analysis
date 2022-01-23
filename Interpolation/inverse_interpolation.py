@@ -1,3 +1,5 @@
+from functools import reduce
+from operator import mul
 from typing import Dict, Iterable, Tuple
 
 import numpy as np
@@ -139,6 +141,23 @@ class InverseInterpolation:
         """
         h = X[1] - X[0]
 
+        def generate_factorial(index: int):
+            return reduce(mul, range(1, index + 1))
+
+        def generate_coef(val, index: int):
+            base_list = range(0, index + 1)
+            terms = map(lambda term: val - term, base_list)
+            return reduce(mul, terms) / generate_factorial(index)
+
+        def get_function(Y: Iterable, val: float):
+            max_order = len(Y) - 1
+            res = val
+            for order in range(1, max_order + 1):
+                coef = generate_coef(val, order)
+                res -= np.diff(Y, order)[0] * coef
+            res = res + generate_coef(val, 1) * np.diff(Y, 1)[0]
+            return res
+
         monotonic_seq = self.__get_monotonic_sequences__(Y=Y)
         isolation_interval = self.__get_isolation_interval__(Y=Y, target=target)
         containing_seq = self.__get_containing_monotonic_seq__(
@@ -146,7 +165,6 @@ class InverseInterpolation:
         """Note nhẹ
         """
         output = []
-        print(containing_seq)
         for case in containing_seq.items():
             interval = case[0]
             seq = case[1]
@@ -154,16 +172,16 @@ class InverseInterpolation:
                 isolation_interval=interval, containing_monotonic_sequence=seq)
 
             if method == 'forward':
-                x = X[interval[0]:seq[1] + 1]
-                y = Y[interval[0]:seq[1] + 1]
+                x = X[interval[0]:]
+                y = Y[interval[0]:]
                 u = (target - y[0]) / h
                 self.interpolator.fit(X=x, Y=y, method=method)
-                term_list = self.interpolator.term_list
-                phi_u = sum(term_list) - term_list[1]
-                phi_u = target - y[0] - phi_u/h
+                # term_list = self.interpolator.term_list
+                # phi_u = sum(term_list) - term_list[1]
+                # phi_u = target - y[0] - phi_u/h
                 for ite in range(self.config['max_ite']):
                     u_old = u
-                    u = phi_u.subs({"x": u})
+                    u = get_function(y, u)
                     tol = np.abs(u - u_old)
                     if tol < float(self.config['tolerance']):
                         break
@@ -176,17 +194,17 @@ class InverseInterpolation:
                 })
 
             elif method == 'backward':
-                x = X[seq[0]:interval[1] + 1]
-                y = Y[seq[0]:interval[1] + 1]
+                x = X[:interval[1] + 1]
+                y = Y[:interval[1] + 1]
                 u = (target - y[-1]) / h
-                self.interpolator.fit(X=x, Y=y, method=method)
-                term_list = self.interpolator.term_list
-                phi_u = sum(term_list) - term_list[1]
-                phi_u = target - y[-1] - phi_u/h
+                # self.interpolator.fit(X=x, Y=y, method=method)
+                # term_list = self.interpolator.term_list
+                # phi_u = sum(term_list) - term_list[1]
+                # phi_u = target - y[-1] - phi_u/h
 
                 for ite in range(self.config['max_ite']):
                     u_old = u
-                    u = phi_u.subs({"x": u})
+                    u = get_function(y, u)
                     tol = np.abs(u - u_old)
                     if tol < float(self.config['tolerance']):
                         break

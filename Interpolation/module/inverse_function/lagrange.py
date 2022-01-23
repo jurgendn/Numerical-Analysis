@@ -11,14 +11,14 @@ class LagrangeInterpolation:
     def __init__(self) -> None:
         pass
 
-    def fit(self, observations: Iterable, references: Iterable):
-        assert len(observations) == len(references)
+    def fit(self, X: Iterable, Y: Iterable):
+        assert len(X) == len(Y)
 
         x_var = sy.Symbol('x')
 
         res = 0
-        for idx, (obs, ref) in enumerate(zip(observations, references)):
-            _rest = list(observations[:idx]) + list(observations[idx + 1:])
+        for idx, (obs, ref) in enumerate(zip(X, Y)):
+            _rest = list(X[:idx]) + list(X[idx + 1:])
 
             __denom_coef = list(product([obs], _rest))
             __denom = list(

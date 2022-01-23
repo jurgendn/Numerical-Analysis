@@ -27,7 +27,6 @@ class NewtonInterpolation:
         x_var = sy.Symbol('x')
 
         divided_differential = self.__get_divided_differential__(X=X, Y=Y)
-        print(divided_differential)
 
         res = 0
         term_list = []
